@@ -1,0 +1,10 @@
+# Created by f-nely
+
+### Eclipse ###
+
+*.metadata
+*.class
+*.classpath
+*.project
+*.settings/
+
