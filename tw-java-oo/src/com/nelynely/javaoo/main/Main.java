@@ -8,6 +8,8 @@ public class Main {
 		Veiculo corsa = new Veiculo();
 		corsa.setMarca("GM");
 		corsa.setNome("Corsa");
+		corsa.abastecer(10);
+		System.out.println(corsa.getQuantidadeCombustivel());
 		System.out.println(corsa.getNome());
 		corsa.ligar();
 		
