@@ -15,6 +15,7 @@ public class Main {
 			System.out.println(corsa.getNome());
 			System.out.println(corsa.getQuantidadeCombustivel());
 			System.out.println(corsa.getQuantidadeRodas());
+			System.out.println(String.format("O veiculo %s está ligado? %b", corsa.getNome(), corsa.IsLigado()));
 			corsa.ligar();
 			Carro celta = new Carro();
 			celta.desligar();
