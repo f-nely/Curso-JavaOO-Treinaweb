@@ -1,15 +1,13 @@
 package com.nelynely.javaoo.main;
 
 import com.nelynely.javaoo.classes.Carro;
-import com.nelynely.javaoo.classes.Moto;
+import com.nelynely.javaoo.excecoes.AbastecimentoVeiculoLigadoException;
+import com.nelynely.javaoo.excecoes.ChassiInvalidoException;
 
 public class Main {
 
 	public static void main(String[] args) {
 		try {
-			/*Carro corsa = new Carro();
-			corsa.setMarca("GM");
-			corsa.setNome("Corsa");*/
 			Carro corsa = new Carro("Corsa", "GM");
 			corsa.setChassi("ABCDE");
 			corsa.abastecer(10);
@@ -17,11 +15,17 @@ public class Main {
 			System.out.println(corsa.getNome());
 			System.out.println(corsa.getQuantidadeCombustivel());
 			System.out.println(corsa.getQuantidadeRodas());
-			System.out.println(String.format("O veiculo %s está ligado? %b", corsa.getNome(), corsa.IsLigado()));
+			System.out.println(String.format("O veículo %s está ligado? %b", corsa.getNome(), corsa.IsLigado()));
+			corsa.abastecer(10);
 			corsa.ligar();
-			Moto fazer = new Moto();
-			fazer.setMarca("Yamaha");
-			fazer.setNome("Fazer");
+			//corsa.abastecer(10);
+			//Moto fazer = new Moto();
+			//fazer.setMarca("Yamaha");
+			//fazer.setNome("Fazer");
+		} catch (AbastecimentoVeiculoLigadoException e) {
+			System.out.println("Você não pode abastecer um veículo enquanto ele estiver ligado");
+		} catch (ChassiInvalidoException e) {
+			System.out.println("O chassi é inválido " + e.getMessage());
 		} catch (Exception e) {
 			System.out.println("Ocorreu um erro: " + e.getMessage());
 		}
