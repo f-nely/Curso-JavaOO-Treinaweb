@@ -8,6 +8,11 @@ public class Veiculo {
 	private String chassi;
 	protected int quantidadeRodas;
 	private float quantidadeCombustivel;
+	private Boolean ligado;
+	
+	public Veiculo() {
+		this.ligado = false;
+	}
 	
 	public String getNome() {
 		return nome;
@@ -50,11 +55,17 @@ public class Veiculo {
 		this.quantidadeCombustivel = quantidadeCombustivel;
 	}
 
+	public Boolean IsLigado() {
+		return ligado;
+	}
+
 	public void ligar() {
+		this.ligado = true;
 		System.out.println("O veículo ligou: ");
 	}
 	
 	public void desligar() {
+		this.ligado = false;
 		System.out.println("O veículo desligou: ");
 	}
 	
