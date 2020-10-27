@@ -3,7 +3,7 @@ package com.nelynely.javaoo.classes;
 import com.nelynely.javaoo.excecoes.AceleracaoVeiculoLigadoException;
 import com.nelynely.javaoo.excecoes.FrenagemVeiculoDesligadoException;
 
-public class Moto extends Veiculo{
+public final class Moto extends Veiculo{
 	
 	public Moto() {
 		this.quantidadeRodas = 2;
