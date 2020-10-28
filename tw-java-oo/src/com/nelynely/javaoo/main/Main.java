@@ -18,6 +18,7 @@ public class Main {
 			System.out.println(corsa.getQuantidadeRodas());
 			System.out.println(String.format("O veículo %s está ligado? %b", corsa.getNome(), corsa.IsLigado()));
 			corsa.abastecer(10);
+			corsa.preparar();
 			corsa.ligar();
 			corsa.acelerar();
 			System.out.println(String.format("A velocidade do veículo: %.2f ", corsa.getVelocidade()));
@@ -26,6 +27,7 @@ public class Main {
 			Moto fazer = new Moto();
 			fazer.setMarca("Yamaha");
 			fazer.setNome("Fazer");
+			fazer.preparar();
 			fazer.ligar();
 			fazer.acelerar();
 			System.out.println(String.format("A velocidade do veículo: %.2f ", fazer.getVelocidade()));
